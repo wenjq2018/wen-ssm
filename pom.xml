@@ -8,25 +8,27 @@
     <artifactId>wen-ssm</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!--为pom定义一些常量，在pom中的其它地方可以直接引用-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring版本号 -->
         <spring.version>4.3.5.RELEASE</spring.version>
         <!-- mybatis版本号 -->
-      <!--  <mybatis.version>3.3.1</mybatis.version>-->
+        <mybatis.version>3.3.1</mybatis.version>
         <!-- Security安全模块 -->
-      <!--  <security.version>4.0.4.RELEASE</security.version>-->
+        <security.version>4.0.4.RELEASE</security.version>
         <!-- Mysql -->
-     <!--   <mysql.version>5.1.38</mysql.version>-->
+        <mysql.version>5.1.38</mysql.version>
         <!-- logback日志 -->
-      <!--  <slf4j.version>1.7.7</slf4j.version>
+        <slf4j.version>1.7.7</slf4j.version>
         <logback.classic.version>1.1.7</logback.classic.version>
-        <logback.core.version>1.1.7</logback.core.version>-->
+        <logback.core.version>1.1.7</logback.core.version>
         <!-- Freemarker -->
-       <!-- <freemarker.version>2.3.23</freemarker.version>-->
+        <freemarker.version>2.3.23</freemarker.version>
         <!-- Jackson -->
-       <!-- <jackson.version>2.7.2</jackson.version>-->
-       <!-- <es.version>5.0.0</es.version>-->
+        <jackson.version>2.7.2</jackson.version>
+        <!-- elasticSearch-->
+        <es.version>5.0.0</es.version>
     </properties>
 
     <dependencies>
@@ -38,28 +40,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
+            <artifactId>spring-beans</artifactId>
             <version>${spring.version}</version>
         </dependency>
         <dependency>
@@ -74,8 +55,54 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- JSON -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
     </dependencies>
 
